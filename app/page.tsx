@@ -507,7 +507,7 @@ export default function LandingPage() {
             </ul>
           </div>
 
-          {/* Colonne 3 : Découvrir */}
+          {/* Colonn 3 : Découvrir */}
           <div>
             <h3 className="font-semibold mb-3">Découvrir</h3>
             <ul className="space-y-1 text-sm">
