@@ -87,7 +87,7 @@ export default function LandingPage() {
           Découvrez <span className="font-bold text-white">monhubimmo</span>
         </h1>
 
-        <p className="font-semibold tracking-wider text-sm mb-3">
+        <p className="mb-3">
           Le 1er réseau collaboratif où tous les professionnels de
           l&apos;immobilier
         </p>
@@ -198,7 +198,7 @@ export default function LandingPage() {
               1er réseau de collaboration 100 % entre professionnels de
               immobilier
             </strong>
-            , toutes enseignes confondues.
+            , toutes enseignes confondues de l’immobilier.
           </p>
         </div>
       </section>
