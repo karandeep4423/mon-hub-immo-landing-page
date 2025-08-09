@@ -1,7 +1,14 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { FaInstagram, FaLinkedin, FaFacebook, FaTiktok } from "react-icons/fa";
+import {
+  FaInstagram,
+  FaLinkedin,
+  FaFacebook,
+  FaTiktok,
+  FaUserCog,
+  FaUser
+} from "react-icons/fa";
 export default function LandingPage() {
   const scrollToForm = () => {
     formRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -80,7 +87,7 @@ export default function LandingPage() {
           Découvrez <span className="font-bold text-white">monhubimmo</span>
         </h1>
 
-        <p className="uppercase tracking-wider text-sm mb-3">
+        <p className="font-semibold tracking-wider text-sm mb-3">
           Le 1er réseau collaboratif où tous les professionnels de
           l&apos;immobilier
         </p>
@@ -351,7 +358,7 @@ export default function LandingPage() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-lg mb-1">
-                    Partage d’annonces privé
+                    Partage d&apos;annonces privé
                   </h4>
                   <p className="text-sm text-gray-700">
                     Déposez et consultez des biens, entre pros, en toute
@@ -375,7 +382,7 @@ export default function LandingPage() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-lg mb-1">
-                    Apporteurs d’affaires intégrés
+                    Apporteurs d&apos;affaires intégrés
                   </h4>
                   <p className="text-sm text-gray-700">
                     Offrez une interface simple à vos apporteurs pour qu’ils
@@ -441,16 +448,8 @@ export default function LandingPage() {
           <div>
             <h4 className="text-lg font-bold mb-6">Pour qui ?</h4>
 
-            <div className="flex items-start gap-3 mb-5">
-              <svg
-                className="w-6 h-6 text-[#00b4d8]"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth={2}
-                viewBox="0 0 24 24"
-              >
-                <path d="M5.121 17.804A9.977 9.977 0 0112 15c2.107 0 4.06.652 5.655 1.762M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>
+            <div className="flex items-start gap-3 mb-6">
+              <FaUser className="w-9 h-9 text-[#00b4d8] flex-shrink-0" />
               <div>
                 <p className="font-semibold">Agents immobiliers</p>
                 <p className="text-sm text-gray-700">
@@ -460,35 +459,29 @@ export default function LandingPage() {
             </div>
 
             <div className="flex items-start gap-3">
-              <svg
-                className="w-6 h-6 text-[#00b4d8]"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth={2}
-                viewBox="0 0 24 24"
-              >
-                <path d="M5 13l4 4L19 7" />
-              </svg>
+              <FaUserCog className="w-10 h-10 text-[#00b4d8] flex-shrink-0" />
               <div>
                 <p className="font-semibold">Apporteurs d&apos;affaires</p>
                 <p className="text-sm text-gray-700">
                   MonHubimmo vous ouvre aussi les portes du réseau caché des
                   particuliers et prescripteurs locaux. Ils peuvent désormais
                   publier leurs propres annonces, consultables par les
-                  mandataires sur la plateforme.<br></br><br></br>
-                  Des particuliers, amis, voisins
-                  ou commerçants qui connaissent un bien à vendre ou un acheteur
-                  potentiel ? C&apos;est un véritable levier de prospection et de
-                  mandats avant même leur diffusion sur les portails.
+                  mandataires sur la plateforme.
+                </p>
+                <p className="text-sm text-gray-700 mt-4">
+                  Des particuliers, amis, voisins ou commerçants qui connaissent
+                  un bien à vendre ou un acheteur potentiel ? C&apos;est un
+                  véritable levier de prospection et de mandats avant même leur
+                  diffusion sur les portails.
                 </p>
               </div>
             </div>
           </div>
 
           {/* Colonne droite */}
-          <div>
+          <div className="flex flex-col">
             <h4 className="text-lg font-bold mb-6">Testez dès maintenant</h4>
-            <ul className="space-y-2 text-sm text-gray-700">
+            <ul className="space-y-2 text-sm text-gray-700 mb-6">
               <li className="flex items-center gap-2">
                 <span className="text-[#00b4d8]">✓</span> Créez un compte
                 gratuit
@@ -503,7 +496,7 @@ export default function LandingPage() {
             </ul>
             <button
               onClick={scrollToForm}
-              className="mt-6 bg-[#00b4d8] text-white px-6 py-2 rounded-full font-semibold hover:bg-[#0094b3] transition"
+              className="bg-[#00b4d8] text-white px-6 py-2 rounded-full font-semibold hover:bg-[#0094b3] transition self-start"
             >
               M&apos;inscrire en avant première
             </button>
