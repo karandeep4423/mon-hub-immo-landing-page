@@ -1,5 +1,4 @@
 "use client";
-
 import { useRef, useState } from "react";
 import {
   FaInstagram,
@@ -7,8 +6,9 @@ import {
   FaFacebook,
   FaTiktok,
   FaUserCog,
-  FaUser
+  FaUser,
 } from "react-icons/fa";
+import { LuHandshake, LuMessageCircle } from "react-icons/lu";
 export default function LandingPage() {
   const scrollToForm = () => {
     formRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -74,33 +74,49 @@ export default function LandingPage() {
   return (
     <main className="bg-[#00b4d8] min-h-screen text-white font-sans">
       {/* PAGE 1 - HERO */}
-      <section className="min-h-screen flex flex-col justify-center items-center text-center px-6">
-        <p className="text-sm  font-medium mb-4">
-          Ici, peu importe votre réseau
+      <section className="min-h-screen flex flex-col justify-center items-center text-center px-6 bg-[#00b4d8] text-white">
+        <p className="text-lg md:text-xl font-medium mb-2 max-w-2xl">
+          Ici, peu importe votre réseau:
           <br />
           <span className="font-bold">
-            ce qui compte, c&apos;est de conclure plus de ventes, ensemble.
+            ce qui compte : c&apos;est de conclure
+            <br />
+            plus de ventes,ensemble.
           </span>
         </p>
 
-        <h1 className="text-3xl md:text-5xl font-semibold mb-2">
-          Découvrez <span className="font-bold text-white">monhubimmo</span>
+        <h1 className="text-3xl md:text-6xl font-bold mb-4">
+          Découvrez
+          <br />
+          <span className="text-white">monhubimmo</span>
         </h1>
 
-        <p className="mb-3">
-          Le 1er réseau collaboratif où tous les professionnels de
-          l&apos;immobilier
-        </p>
+        {/* Feature items with icons */}
+        <div className="sm:space-y-7  space-y-3 mb-3 sm:mb-7 max-w-2xl">
+          <div className="flex items-center justify-center gap-4">
+            <LuMessageCircle className="w-12 h-12 text-white " />
+            <p className="text-lg md:text-xl font-medium text-left">
+              Le 1ère réseau collaboratif entre
+              <br />
+              tous professionnels de l&apos;immobilier.
+            </p>
+          </div>
 
-        <p className="mb-6">
-          Partagent biens et clients, toutes enseignes confondues
-        </p>
+          <div className="flex mr-3 items-center justify-center gap-4">
+            <LuHandshake className="w-12 h-12 text-white" />
+            <p className="text-lg md:text-xl font-medium text-left">
+              Partagez biens et clients
+              <br />
+              de toutes enseignes confondues.
+            </p>
+          </div>
+        </div>
 
         <button
           onClick={scrollToForm}
-          className="bg-white text-[#00b4d8] px-6 py-2 rounded-full font-bold hover:bg-gray-100 transition"
+          className="bg-white text-gray-900 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-200 shadow-lg"
         >
-          Je veux être informé dés l&apos;ouverture
+          Je veux être informé dès maintenant
         </button>
       </section>
 
@@ -205,62 +221,92 @@ export default function LandingPage() {
 
       {/* PAGE 2 - FORMULAIRE */}
       <section className="bg-[#00b4d8] py-16 px-6 flex flex-col items-center text-center">
-        <h2 className="text-3xl font-bold mb-2 text-white">
-          Inscrivez-vous maintenant, les 3 premiers mois sont offerts
+        <h2 className="text-xl font-semibold mb-2 text-white">
+          Offre de lancement! Inscrivez-vous maintenant!
+          <br />
+          Profitez de 3 mois offerts pour les 100 premiers inscrits
         </h2>
         <p className="mb-6 text-white max-w-xl">
           Rejoignez la <strong>1er plateforme collaborative</strong> de
           l&apos;immobilier
         </p>
+        <div className="flex  flex-col-reverse sm:flex-row items-center justify-center gap-14">
+          <div className="bg-white text-gray-900 w-full max-w-md p-6 rounded-lg shadow">
+            <h3 className="text-lg font-semibold mb-4">
+              Entrez vos informations :
+            </h3>
+            <form className="space-y-4" onSubmit={handleSubmit} ref={formRef}>
+              <input
+                type="text"
+                name="name"
+                placeholder="Nom"
+                className="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-[#0077b6] focus:border-transparent"
+                required
+                disabled={loading}
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Adresse e-mail"
+                className="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-[#0077b6] focus:border-transparent"
+                required
+                disabled={loading}
+              />
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Numéro de téléphone"
+                className="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-[#0077b6] focus:border-transparent"
+                disabled={loading}
+              />
+              <button
+                type="submit"
+                disabled={loading}
+                className="bg-[#00b4d8] text-white w-full py-2 rounded font-semibold hover:bg-[#0094b3] transition disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {loading ? "Envoi en cours..." : "Inscrivez vous maintenant"}
+              </button>
+            </form>
 
-        <div className="bg-white text-gray-900 w-full max-w-md p-6 rounded-lg shadow">
-          <h3 className="text-lg font-semibold mb-4">
-            Entrez vos informations :
-          </h3>
-          <form className="space-y-4" onSubmit={handleSubmit} ref={formRef}>
-            <input
-              type="text"
-              name="name"
-              placeholder="Nom"
-              className="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-[#0077b6] focus:border-transparent"
-              required
-              disabled={loading}
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Adresse e-mail"
-              className="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-[#0077b6] focus:border-transparent"
-              required
-              disabled={loading}
-            />
-            <input
-              type="tel"
-              name="phone"
-              placeholder="Numéro de téléphone"
-              className="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-[#0077b6] focus:border-transparent"
-              disabled={loading}
-            />
+            {message && (
+              <div
+                className={`mt-4 p-3 rounded text-sm ${
+                  messageType === "success"
+                    ? "bg-green-100 text-green-700"
+                    : "bg-red-100 text-red-700"
+                }`}
+              >
+                {message}
+              </div>
+            )}
+          </div>
+          <div className="relative w-full h-72   max-w-md mx-auto">
+            <video className="w-full h-full object-fill rounded-lg shadow-xl" controls>
+              <source src="/partie.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
             <button
-              type="submit"
-              disabled={loading}
-              className="bg-[#00b4d8] text-white w-full py-2 rounded font-semibold hover:bg-[#0094b3] transition disabled:opacity-50 disabled:cursor-not-allowed"
+              className="absolute inset-0 flex items-center justify-center"
+              onClick={(e) => {
+                const video = e.currentTarget
+                  .previousElementSibling as HTMLVideoElement;
+                if (video.paused) {
+                  video.play();
+                  e.currentTarget.style.display = "none";
+                }
+              }}
             >
-              {loading ? "Envoi en cours..." : "Inscrivez vous maintenant"}
+              <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center">
+                <svg
+                  className="w-12 h-12 text-[#00b4d8]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
+                </svg>
+              </div>
             </button>
-          </form>
-
-          {message && (
-            <div
-              className={`mt-4 p-3 rounded text-sm ${
-                messageType === "success"
-                  ? "bg-green-100 text-green-700"
-                  : "bg-red-100 text-red-700"
-              }`}
-            >
-              {message}
-            </div>
-          )}
+          </div>
         </div>
       </section>
 
@@ -440,7 +486,34 @@ export default function LandingPage() {
             </div>
           </div>
         </section>
-        <hr className="my-20 border-gray-300 max-w-6xl mx-auto" />
+         <div className="relative w-full h-full   max-w-md mx-auto">
+            <video className="w-full h-full object-fill rounded-lg shadow-xl" controls>
+              <source src="/second.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <button
+              className="absolute inset-0 flex items-center justify-center"
+              onClick={(e) => {
+                const video = e.currentTarget
+                  .previousElementSibling as HTMLVideoElement;
+                if (video.paused) {
+                  video.play();
+                  e.currentTarget.style.display = "none";
+                }
+              }}
+            >
+              <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center">
+                <svg
+                  className="w-12 h-12 text-[#00b4d8]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
+                </svg>
+              </div>
+            </button>
+          </div>
+        <hr className="my-10 border-gray-300 max-w-6xl mx-auto" />
 
         {/* POUR QUI + TESTEZ MAINTENANT */}
         <section className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 text-[#034752]">
@@ -504,103 +577,108 @@ export default function LandingPage() {
         </section>
       </section>
 
-      <footer className="bg-[#f9f9f9] text-[#333] py-12 px-6">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-8">
-          {/* Colonne 1 : Logo */}
-          <div>
-            <h2 className="text-2xl font-bold text-[#00b4d8]">
-              <span className="text-black">mon</span>hubimmo
+      <footer className="bg-[#f9f9f9] text-[#333] py-10 px-6 sm:px-16">
+        <div className=" max-w-7xl mx-auto  justify-center grid md:grid-cols-3 gap-4 md:gap-16">
+          {/* Logo */}
+          <div className="mb-4">
+            <h2 className="text-2xl font-bold">
+              <span className="text-black">mon</span>
+              <span className="text-[#00b4d8]">hubimmo</span>
             </h2>
+            <p className="text-sm font-medium text-[#00b4d8] mt-2">
+              Le 1er réseau collaboratif des
+              <br />
+              professionnels de l&apos;immobilier
+            </p>
+            {/* Contact Info */}
+            <div className="my-4 space-y-3">
+              <div className="flex items-center space-x-2">
+                <svg
+                  className="w-5 h-5 text-[#00b4d8]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                </svg>
+                <a
+                  href="mailto:contact@monhubimmo.com"
+                  className="text-sm font-medium"
+                >
+                  contact@monhubimmo.com
+                </a>
+              </div>
+              <div className="flex items-center space-x-2">
+                <svg
+                  className="w-5 h-5 text-[#00b4d8]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                </svg>
+                <a href="tel:+33785549213" className="text-sm font-medium">
+                  +33 7 85 54 92 13
+                </a>
+              </div>
+            </div>
           </div>
 
-          {/* Colonne 2 : Rejoindre */}
-          <div>
-            <h3 className="font-semibold mb-3">Rejoindre MonHubImmo</h3>
-            <ul className="space-y-1 text-sm">
-              <li>
-                <a href="#">Profil reconversion</a>
-              </li>
-              <li>
-                <a href="#">Profil immobilier</a>
-              </li>
-              <li>
-                <a href="#">Rémunération</a>
-              </li>
-              <li>
-                <a href="#">Formation</a>
-              </li>
-              <li>
-                <a href="#">Témoignages</a>
-              </li>
-              <li>
-                <a href="#">Presse</a>
-              </li>
-              <li>
-                <a href="#">Blog</a>
-              </li>
-              <li className="mt-2">
-                Contact : <br />
-                <a href="mailto:contact@monhubimmo.com">
-                  contact@monhubimmo.com{" "}
-                </a>{" "}
-                <br></br>
-                <a href="tel:+33785549213">+33 785549213</a>
-              </li>
-            </ul>
+          {/* Useful Links */}
+          <div className="mb-4">
+            <h3 className="font-semibold mb-4">Liens utiles</h3>
+            <div className=" text-left space-y-2 text-sm">
+              <div>
+                <a href="#" className="hover:text-[#00b4d8]">
+                  Découvrir MonHubImmo
+                </a>
+              </div>
+              <div>
+                <a href="#" className="hover:text-[#00b4d8]">
+                  Inscription (3 mois offerts)
+                </a>
+              </div>
+              <div>
+                <a href="#" className="hover:text-[#00b4d8]">
+                  Conditions générales
+                </a>
+              </div>
+              <div>
+                <a href="#" className="hover:text-[#00b4d8]">
+                  Politique de confidentialité
+                </a>
+              </div>
+            </div>
           </div>
 
-          {/* Colonn 3 : Découvrir */}
-          <div>
-            <h3 className="font-semibold mb-3">Découvrir</h3>
-            <ul className="space-y-1 text-sm">
-              <li>
-                <a href="#">Acheter</a>
-              </li>
-              <li>
-                <a href="#">Vendre</a>
-              </li>
-              <li>
-                <a href="#">Estimer</a>
-              </li>
-              <li>
-                <a href="#">Trouver un conseiller</a>
-              </li>
-              <li>
-                <a href="#">Notre vision</a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Colonne 4 : Suivez-nous */}
-          <div>
-            <h3 className="font-semibold mb-3">Suivez-nous</h3>
-            <div className="flex space-x-4 mb-4">
+          {/* Social Media */}
+          <div className="mb-4">
+            <h3 className="font-semibold mb-4">Suivez-nous</h3>
+            <div className="flex  space-x-4">
               <a
                 href="https://www.instagram.com/monhubimmo/"
-                className="hover:opacity-80 transition-opacity text-pink-500"
+                className="text-[#00b4d8] hover:opacity-80"
               >
                 <FaInstagram className="w-6 h-6" />
               </a>
-              <a
-                href="#"
-                className="hover:opacity-80 transition-opacity text-blue-600"
-              >
+              <a href="#" className="text-[#00b4d8] hover:opacity-80">
                 <FaLinkedin className="w-6 h-6" />
               </a>
               <a
                 href="https://www.facebook.com/profile.php?viewas=100000686899395&id=61579213881250"
-                className="hover:opacity-80 transition-opacity text-blue-500"
+                className="text-[#00b4d8] hover:opacity-80"
               >
                 <FaFacebook className="w-6 h-6" />
               </a>
-              <a
-                href="#"
-                className="hover:opacity-80 transition-opacity text-black"
-              >
+              <a href="#" className="text-[#00b4d8] hover:opacity-80">
                 <FaTiktok className="w-6 h-6" />
               </a>
             </div>
           </div>
+        </div>
+        {/* Copyright */}
+        <div className="text-center text-xs text-gray-500 ">
+          <p>© 2025 MonHubImmo - Tous droits réservés</p>
+          <p className="mt-2">Connecter les pros, partager les opportunités.</p>
         </div>
         {/* Bar inférieure */}
         <div className="border-t mt-10 pt-4 text-xs text-gray-500 text-center">
@@ -608,7 +686,7 @@ export default function LandingPage() {
             Politique de confidentialité
           </a>{" "}
           |
-          <a href="#" className="mx-2">
+          <a href="/mentions-legales" className="mx-2">
             Mentions légales
           </a>{" "}
           |
