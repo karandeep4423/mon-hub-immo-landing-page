@@ -211,10 +211,10 @@ export default function LandingPage() {
           <p className="text-md md:text-lg font-semibold">
             <strong>MonHubImmo</strong> est le{" "}
             <strong>
-              1er réseau de collaboration 100 % entre professionnels de
-              immobilier
+              1er réseau de collaboration 100% entre professionnels de
+              l&apos;immobilier
             </strong>
-            , toutes enseignes confondues de l’immobilier.
+            , toutes enseignes confondues de l&apos;immobilier.
           </p>
         </div>
       </section>
@@ -280,33 +280,6 @@ export default function LandingPage() {
               </div>
             )}
           </div>
-          <div className="relative w-full h-72   max-w-md mx-auto">
-            <video className="w-full h-full object-fill rounded-lg shadow-xl" controls>
-              <source src="/partie.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-            <button
-              className="absolute inset-0 flex items-center justify-center"
-              onClick={(e) => {
-                const video = e.currentTarget
-                  .previousElementSibling as HTMLVideoElement;
-                if (video.paused) {
-                  video.play();
-                  e.currentTarget.style.display = "none";
-                }
-              }}
-            >
-              <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center">
-                <svg
-                  className="w-12 h-12 text-[#00b4d8]"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
-                </svg>
-              </div>
-            </button>
-          </div>
         </div>
       </section>
 
@@ -371,13 +344,33 @@ export default function LandingPage() {
             </button>
           </div>
 
-          {/* Image maquette */}
-          <div className="flex justify-center">
-            <img
-              src="/tele.png"
-              alt="Aperçu de l’application MonHubimmo"
-              className="w-[250px] sm:w-[300px] shadow-lg rounded-xl"
-            />
+          {/* video */}
+           <div className="relative w-full h-72   max-w-md mx-auto">
+            <video className="w-full h-full object-fill rounded-lg shadow-xl" controls>
+              <source src="/partie.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <button
+              className="absolute inset-0 flex items-center justify-center"
+              onClick={(e) => {
+                const video = e.currentTarget
+                  .previousElementSibling as HTMLVideoElement;
+                if (video.paused) {
+                  video.play();
+                  e.currentTarget.style.display = "none";
+                }
+              }}
+            >
+              <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center">
+                <svg
+                  className="w-12 h-12 text-[#00b4d8]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
+                </svg>
+              </div>
+            </button>
           </div>
         </div>
 
@@ -638,7 +631,7 @@ export default function LandingPage() {
                 </a>
               </div>
               <div>
-                <a href="#" className="hover:text-[#00b4d8]">
+                <a href="/mentions-legales" className="hover:text-[#00b4d8]">
                   Conditions générales
                 </a>
               </div>
@@ -660,7 +653,7 @@ export default function LandingPage() {
               >
                 <FaInstagram className="w-6 h-6" />
               </a>
-              <a href="#" className="text-[#00b4d8] hover:opacity-80">
+              <a href="https://www.linkedin.com/in/mon-hub-immo-a65904379?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" className="text-[#00b4d8] hover:opacity-80">
                 <FaLinkedin className="w-6 h-6" />
               </a>
               <a
@@ -669,7 +662,7 @@ export default function LandingPage() {
               >
                 <FaFacebook className="w-6 h-6" />
               </a>
-              <a href="#" className="text-[#00b4d8] hover:opacity-80">
+              <a href="https://www.tiktok.com/@hubimmo?_t=ZN-8yqbaoADaXG&_r=1" className="text-[#00b4d8] hover:opacity-80">
                 <FaTiktok className="w-6 h-6" />
               </a>
             </div>
@@ -682,7 +675,7 @@ export default function LandingPage() {
         </div>
         {/* Bar inférieure */}
         <div className="border-t mt-10 pt-4 text-xs text-gray-500 text-center">
-          <a href="#" className="mx-2">
+          <a href="politique-de-confidentialite" className="mx-2">
             Politique de confidentialité
           </a>{" "}
           |
