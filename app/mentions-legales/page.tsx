@@ -1,14 +1,14 @@
 "use client";
 import Head from "next/head";
 
-const ConditionsGenerales = () => {
+const MentionsLegales = () => {
   return (
     <>
       <Head>
-        <title>Conditions Générales - MonHubimmo</title>
+        <title>Mentions légales - MonHubimmo</title>
         <meta
           name="description"
-          content="Conditions Générales de Vente et d'Utilisation de MonHubimmo"
+          content="Mentions légales de MonHubimmo"
         />
       </Head>
 
@@ -18,246 +18,90 @@ const ConditionsGenerales = () => {
           {/* Title Section */}
           <div className="bg-white rounded-lg shadow-sm p-6 md:p-8 mb-8">
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Conditions Générales de Vente et d&apos;Utilisation
+              Mentions légales
             </h1>
             <div className="flex items-center space-x-2 text-sm text-gray-600">
               <span className="bg-[#00b4d8] text-white px-3 py-1 rounded-full font-medium">
                 MonHubimmo
               </span>
               <span>•</span>
-              <span>Dernière mise à jour : le 10 août 2025</span>
+              <span>Dernière mise à jour : 29 août 2025</span>
             </div>
           </div>
 
           {/* Content Sections */}
           <div className="space-y-8">
-            {/* Section 1 */}
+            {/* Section 1 - Site Editor */}
             <section className="bg-white rounded-lg shadow-sm p-6 md:p-8">
               <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 flex items-center">
                 <span className="bg-[#00b4d8] text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">
                   1
                 </span>
-                Présentation de MonHubimmo
+                Éditeur du site
               </h2>
               <div className="ml-11 space-y-4 text-gray-700 text-sm md:text-base leading-relaxed">
-                <p>
-                  MonHubimmo est une plateforme collaborative en ligne
-                  permettant la mise en relation entre professionnels de
-                  l`&apos;immobilier (agents immobiliers, mandataires, apporteurs
-                  d`&apos;affaires, partenaires).
-                </p>
-                <p>
-                  L`&apos;accès à la plateforme est strictement réservé aux
-                  professionnels justifiant de leur statut.
-                </p>
-                <p>
-                  MonHubimmo n`&apos;est ni une agence immobilière, ni un
-                  intermédiaire agréé, ni un garant des transactions.
-                </p>
-                <p className="font-medium">
-                  Son rôle est exclusivement de faciliter le contact et
-                  l`&apos;échange d`&apos;informations entre ses utilisateurs.
-                </p>
+                <p>Le site MonHubimmo est édité par :</p>
+                <ul className="list-disc list-inside space-y-2 ml-4">
+                  <li><span className="font-medium">Nom de l&apos;entreprise :</span> MonHubimmo</li>
+                  <li><span className="font-medium">Forme juridique :</span> SAS</li>
+                  <li><span className="font-medium">Siège social :</span> [Adresse complète]</li>
+                  <li><span className="font-medium">SIRET :</span> [Numéro SIRET – En cours de création]</li>
+                  <li><span className="font-medium">Responsable de la publication :</span> [Nom, prénom]</li>
+                </ul>
               </div>
             </section>
 
-            {/* Section 2 */}
+            {/* Section 2 - Hosting */}
             <section className="bg-white rounded-lg shadow-sm p-6 md:p-8">
               <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 flex items-center">
                 <span className="bg-[#00b4d8] text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">
                   2
                 </span>
-                Objet des CGV / CGU
+                Hébergement
               </h2>
               <div className="ml-11 text-gray-700 text-sm md:text-base leading-relaxed">
                 <p>
-                  Les présentes conditions ont pour objet de définir les
-                  modalités et conditions d`&apos;utilisation de la plateforme
-                  MonHubimmo ainsi que les droits et obligations des
-                  utilisateurs et de l`&apos;éditeur.
+                  Le site est hébergé par Vercel
                 </p>
               </div>
             </section>
 
-            {/* Section 3 */}
+            {/* Section 3 - Intellectual Property */}
             <section className="bg-white rounded-lg shadow-sm p-6 md:p-8">
               <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 flex items-center">
                 <span className="bg-[#00b4d8] text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">
                   3
                 </span>
-                Accès à la plateforme
+                Propriété intellectuelle
               </h2>
-              <div className="ml-11 space-y-4 text-gray-700 text-sm md:text-base leading-relaxed">
+              <div className="ml-11 text-gray-700 text-sm md:text-base leading-relaxed">
                 <p>
-                  L`&apos;inscription est réservée aux professionnels de l`&apos;immobilier
-                  disposant d`&apos;un numéro SIREN/SIRET ou d`&apos;un justificatif de leur
-                  statut (carte T, attestation employeur, etc.).
+                  L&apos;ensemble des contenus du site (textes, images, logo, charte graphique) est protégé par le droit de la propriété intellectuelle.
                 </p>
-                <p>
-                  L`&apos;accès nécessite la création d`&apos;un compte et l`&apos;acceptation
-                  sans réserve des présentes CGV/CGU.
-                </p>
-                <p>
-                  MonHubimmo se réserve le droit de refuser ou suspendre l`&apos;accès
-                  à tout utilisateur ne respectant pas les conditions.
+                <p className="mt-4 font-medium">
+                  Toute reproduction, diffusion ou utilisation sans autorisation est interdite.
                 </p>
               </div>
             </section>
 
-            {/* Section 4 */}
+            {/* Section 4 - Data Protection */}
             <section className="bg-white rounded-lg shadow-sm p-6 md:p-8">
               <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 flex items-center">
                 <span className="bg-[#00b4d8] text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">
                   4
                 </span>
-                Fonctionnalités proposées
-              </h2>
-              <div className="ml-11 space-y-4 text-gray-700 text-sm md:text-base leading-relaxed">
-                <p>MonHubimmo met à disposition :</p>
-                <ul className="list-disc list-inside space-y-2 ml-4">
-                  <li>
-                    Un espace de publication et consultation de biens
-                    immobiliers.
-                  </li>
-                  <li>
-                    Un système de recherche et de mise en relation avec d`&apos;autres
-                    professionnels.
-                  </li>
-                  <li>Une messagerie interne.</li>
-                  <li>Un espace dédié aux apporteurs d`&apos;affaires.</li>
-                </ul>
-                <div className="bg-amber-50 border-l-4 border-amber-400 p-4 rounded">
-                  <p className="font-semibold text-amber-800 mb-2">
-                    Important :
-                  </p>
-                  <p className="text-amber-700">
-                    MonHubimmo n`&apos;intervient pas dans les transactions, ne
-                    perçoit aucune commission sur les ventes ou locations, et ne
-                    vérifie pas l`&apos;exactitude des informations publiées par ses
-                    membres.
-                  </p>
-                </div>
-              </div>
-            </section>
-
-            {/* Section 5 */}
-            <section className="bg-white rounded-lg shadow-sm p-6 md:p-8">
-              <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 flex items-center">
-                <span className="bg-[#00b4d8] text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">
-                  5
-                </span>
-                Responsabilités
-              </h2>
-              <div className="ml-11 space-y-6 text-gray-700 text-sm md:text-base leading-relaxed">
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">
-                    Responsabilité de MonHubimmo :
-                  </h3>
-                  <p>
-                    MonHubimmo s`&apos;engage à fournir un service conforme aux
-                    standards du secteur mais ne garantit pas l`&apos;absence
-                    d`&apos;interruptions ou d`&apos;erreurs techniques.
-                  </p>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">
-                    Responsabilité des utilisateurs :
-                  </h3>
-                  <p>
-                    Les membres sont seuls responsables des informations qu`&apos;ils
-                    publient et des engagements pris dans le cadre des contacts
-                    établis via la plateforme.
-                  </p>
-                </div>
-              </div>
-            </section>
-
-            {/* Section 6 */}
-            <section className="bg-white rounded-lg shadow-sm p-6 md:p-8">
-              <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 flex items-center">
-                <span className="bg-[#00b4d8] text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">
-                  6
-                </span>
-                Tarifs et conditions de paiement
-              </h2>
-              <div className="ml-11 space-y-4 text-gray-700 text-sm md:text-base leading-relaxed">
-                <p>
-                  Certaines fonctionnalités peuvent être gratuites ou soumises à
-                  un abonnement.
-                </p>
-                <p>Les tarifs en vigueur sont indiqués sur le site.</p>
-                <p>
-                  Tout abonnement payé est dû pour la période engagée et ne peut
-                  donner lieu à remboursement sauf dispositions légales
-                  contraires.
-                </p>
-              </div>
-            </section>
-
-            {/* Section 7 */}
-            <section className="bg-white rounded-lg shadow-sm p-6 md:p-8">
-              <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 flex items-center">
-                <span className="bg-[#00b4d8] text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">
-                  7
-                </span>
-                Propriété intellectuelle
+                Protection des données
               </h2>
               <div className="ml-11 text-gray-700 text-sm md:text-base leading-relaxed">
                 <p>
-                  Tous les contenus (textes, logos, graphismes) de MonHubimmo
-                  sont protégés par le droit d`&apos;auteur et ne peuvent être
-                  utilisés sans autorisation.
-                </p>
-              </div>
-            </section>
-
-            {/* Section 8 */}
-            <section className="bg-white rounded-lg shadow-sm p-6 md:p-8">
-              <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 flex items-center">
-                <span className="bg-[#00b4d8] text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">
-                  8
-                </span>
-                Données personnelles
-              </h2>
-              <div className="ml-11 text-gray-700 text-sm md:text-base leading-relaxed">
-                <p>
-                  MonHubimmo collecte et traite les données conformément à sa
-                  politique de confidentialité disponible sur le site, en
-                  conformité avec le RGPD.
-                </p>
-              </div>
-            </section>
-
-            {/* Section 9 */}
-            <section className="bg-white rounded-lg shadow-sm p-6 md:p-8">
-              <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 flex items-center">
-                <span className="bg-[#00b4d8] text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">
-                  9
-                </span>
-                Résiliation
-              </h2>
-              <div className="ml-11 text-gray-700 text-sm md:text-base leading-relaxed">
-                <p>
-                  MonHubimmo se réserve le droit de suspendre ou supprimer un
-                  compte en cas de non-respect des présentes conditions ou de
-                  comportement nuisible à la communauté.
-                </p>
-              </div>
-            </section>
-
-            {/* Section 10 */}
-            <section className="bg-white rounded-lg shadow-sm p-6 md:p-8">
-              <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 flex items-center">
-                <span className="bg-[#00b4d8] text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">
-                  10
-                </span>
-                Loi applicable
-              </h2>
-              <div className="ml-11 text-gray-700 text-sm md:text-base leading-relaxed">
-                <p>
-                  Les présentes conditions sont soumises au droit français. Tout
-                  litige relèvera de la compétence exclusive des tribunaux
-                  français.
+                  Pour plus d&apos;informations sur la collecte et le traitement de vos données personnelles, consultez notre{" "}
+                  <a 
+                    href="/politique-confidentialite" 
+                    className="text-[#00b4d8] underline hover:text-blue-600 font-medium"
+                  >
+                    Politique de confidentialité
+                  </a>
+                  .
                 </p>
               </div>
             </section>
@@ -265,8 +109,7 @@ const ConditionsGenerales = () => {
             {/* Final Notice */}
             <section className="bg-[#00b4d8] text-white rounded-lg p-6 md:p-8">
               <p className="text-center text-sm md:text-base font-medium">
-                En utilisant MonHubimmo, vous reconnaissez avoir lu et accepté
-                les présentes CGV/CGU.
+                Ces mentions légales peuvent être modifiées à tout moment. Il appartient à l&apos;utilisateur de s&apos;y référer régulièrement.
               </p>
             </section>
           </div>
@@ -286,4 +129,4 @@ const ConditionsGenerales = () => {
   );
 };
 
-export default ConditionsGenerales;
+export default MentionsLegales;

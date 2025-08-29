@@ -35,7 +35,7 @@ const PolitiqueConfidentialite = () => {
             <section className="bg-white rounded-lg shadow-sm p-6 md:p-8">
               <div className="text-gray-700 text-sm md:text-base leading-relaxed">
                 <p>
-                  La présente politique de confidentialité explique comment MonHubimmo collecte, utilise et protège les informations que vous nous fournissez lorsque vous utilisez notre site ou vous inscrivez pour tester notre plateforme.
+                  Chez MonHubimmo, la protection de vos données personnelles est une priorité. Nous nous engageons à assurer la transparence et la sécurité dans le traitement des informations que vous nous confiez.
                 </p>
               </div>
             </section>
@@ -46,14 +46,18 @@ const PolitiqueConfidentialite = () => {
                 <span className="bg-[#00b4d8] text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">
                   1
                 </span>
-                Qui sommes-nous ?
+                Données collectées
               </h2>
               <div className="ml-11 space-y-4 text-gray-700 text-sm md:text-base leading-relaxed">
+                <p>Lors de votre inscription, nous pouvons être amenés à collecter :</p>
+                <ul className="list-disc list-inside space-y-2 ml-4">
+                  <li>Votre nom, prénom</li>
+                  <li>Votre adresse e-mail</li>
+                  <li>Votre numéro de téléphone</li>
+                  <li>Vos informations professionnelles (réseau, agence, carte T, SIREN/RSAC…)</li>
+                </ul>
                 <p>
-                  MonHubimmo est une plateforme de mise en relation entre professionnels de l&apos;immobilier et apporteurs d&apos;affaires.
-                </p>
-                <p>
-                  Nous ne sommes pas une agence immobilière et nous n&apos;intervenons pas directement dans les transactions. Notre rôle est uniquement de faciliter le contact entre les utilisateurs inscrits.
+                  Ces informations sont nécessaires pour vérifier votre statut de professionnel et vous donner accès à la plateforme.
                 </p>
               </div>
             </section>
@@ -64,17 +68,18 @@ const PolitiqueConfidentialite = () => {
                 <span className="bg-[#00b4d8] text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">
                   2
                 </span>
-                Données collectées
+                Utilisation des données
               </h2>
               <div className="ml-11 space-y-4 text-gray-700 text-sm md:text-base leading-relaxed">
-                <p>Lorsque vous remplissez notre formulaire d&apos;inscription, nous collectons :</p>
+                <p>Vos données sont utilisées uniquement pour :</p>
                 <ul className="list-disc list-inside space-y-2 ml-4">
-                  <li>Nom et prénom</li>
-                  <li>Adresse e-mail</li>
-                  <li>Numéro de téléphone</li>
+                  <li>Créer et gérer votre compte MonHubimmo</li>
+                  <li>Vous informer sur le lancement et l&apos;évolution de la plateforme</li>
+                  <li>Assurer la sécurité des échanges et des publications</li>
+                  <li>Vous adresser, si vous l&apos;acceptez, des communications liées à nos services</li>
                 </ul>
-                <p>
-                  Ces données sont nécessaires pour vous inscrire sur la liste des personnes souhaitant tester la plateforme à sa sortie.
+                <p className="font-medium">
+                  Nous ne vendons ni ne partageons vos données personnelles à des tiers non autorisés.
                 </p>
               </div>
             </section>
@@ -85,17 +90,14 @@ const PolitiqueConfidentialite = () => {
                 <span className="bg-[#00b4d8] text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">
                   3
                 </span>
-                Utilisation des données
+                Hébergement et sécurité
               </h2>
               <div className="ml-11 space-y-4 text-gray-700 text-sm md:text-base leading-relaxed">
-                <p>Vos données sont utilisées uniquement pour :</p>
-                <ul className="list-disc list-inside space-y-2 ml-4">
-                  <li>Vous contacter concernant l&apos;ouverture et l&apos;accès à la plateforme</li>
-                  <li>Vous envoyer des informations sur le fonctionnement de MonHubimmo</li>
-                  <li>Vous permettre d&apos;accéder aux fonctionnalités lors de la phase de test</li>
-                </ul>
-                <p className="font-medium">
-                  Elles ne seront jamais vendues ou louées à des tiers.
+                <p>
+                  Vos données sont stockées sur des serveurs sécurisés situés en Europe.
+                </p>
+                <p>
+                  Des mesures techniques et organisationnelles sont mises en place pour prévenir toute perte, utilisation abusive, accès non autorisé ou divulgation.
                 </p>
               </div>
             </section>
@@ -106,15 +108,26 @@ const PolitiqueConfidentialite = () => {
                 <span className="bg-[#00b4d8] text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">
                   4
                 </span>
-                Stockage et sécurité
+                Droits des utilisateurs
               </h2>
               <div className="ml-11 space-y-4 text-gray-700 text-sm md:text-base leading-relaxed">
                 <p>
-                  Vos informations sont stockées de manière sécurisée sur des serveurs conformes aux réglementations en vigueur (RGPD).
+                  Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez de droits :
                 </p>
-                <p>
-                  Nous mettons en place toutes les mesures techniques et organisationnelles pour protéger vos données contre tout accès non autorisé, perte ou modification.
-                </p>
+                <ul className="list-disc list-inside space-y-2 ml-4">
+                  <li>Accéder à vos données personnelles</li>
+                  <li>Demander leur rectification ou suppression</li>
+                  <li>Limiter ou vous opposer à leur traitement</li>
+                  <li>Retirer votre consentement à tout moment</li>
+                </ul>
+                <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded mt-4">
+                  <p className="font-semibold text-blue-800 mb-2">
+                    Pour exercer vos droits :
+                  </p>
+                  <p className="text-blue-700">
+                    Contactez-nous à : <a href="mailto:contact@monhubimmo.com" className="underline font-medium">contact@monhubimmo.com</a>
+                  </p>
+                </div>
               </div>
             </section>
 
@@ -124,16 +137,11 @@ const PolitiqueConfidentialite = () => {
                 <span className="bg-[#00b4d8] text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">
                   5
                 </span>
-                Partage des données
+                Conservation des données
               </h2>
-              <div className="ml-11 space-y-4 text-gray-700 text-sm md:text-base leading-relaxed">
-                <p>Vos données ne sont partagées qu&apos;avec :</p>
-                <ul className="list-disc list-inside space-y-2 ml-4">
-                  <li>Nos prestataires techniques (hébergement, e-mailing)</li>
-                  <li>Les partenaires indispensables au bon fonctionnement de la plateforme</li>
-                </ul>
+              <div className="ml-11 text-gray-700 text-sm md:text-base leading-relaxed">
                 <p>
-                  Dans tous les cas, ces prestataires sont soumis à une obligation stricte de confidentialité.
+                  Vos données sont conservées uniquement pendant la durée nécessaire à la gestion de votre compte et conformément aux obligations légales.
                 </p>
               </div>
             </section>
@@ -144,55 +152,17 @@ const PolitiqueConfidentialite = () => {
                 <span className="bg-[#00b4d8] text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">
                   6
                 </span>
-                Vos droits
+                Contact
               </h2>
               <div className="ml-11 space-y-4 text-gray-700 text-sm md:text-base leading-relaxed">
                 <p>
-                  Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez des droits suivants :
+                  Pour toute question relative à la protection de vos données personnelles, vous pouvez nous écrire à :
                 </p>
-                <ul className="list-disc list-inside space-y-2 ml-4">
-                  <li>Droit d&apos;accès, de rectification et de suppression de vos données</li>
-                  <li>Droit d&apos;opposition au traitement de vos données</li>
-                  <li>Droit à la portabilité des données</li>
-                </ul>
                 <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded mt-4">
-                  <p className="font-semibold text-blue-800 mb-2">
-                    Pour exercer vos droits :
-                  </p>
                   <p className="text-blue-700">
-                    Vous pouvez nous contacter à : <a href="mailto:contact@monhubimmo.com" className="underline font-medium">contact@monhubimmo.com</a>
+                    📧 <a href="mailto:contact@monhubimmo.com" className="underline font-medium">contact@monhubimmo.com</a>
                   </p>
                 </div>
-              </div>
-            </section>
-
-            {/* Section 7 */}
-            <section className="bg-white rounded-lg shadow-sm p-6 md:p-8">
-              <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 flex items-center">
-                <span className="bg-[#00b4d8] text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">
-                  7
-                </span>
-                Conservation des données
-              </h2>
-              <div className="ml-11 text-gray-700 text-sm md:text-base leading-relaxed">
-                <p>
-                  Vos informations sont conservées uniquement pendant la durée nécessaire à l&apos;objectif initial, ou jusqu&apos;à ce que vous demandiez leur suppression.
-                </p>
-              </div>
-            </section>
-
-            {/* Section 8 */}
-            <section className="bg-white rounded-lg shadow-sm p-6 md:p-8">
-              <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 flex items-center">
-                <span className="bg-[#00b4d8] text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">
-                  8
-                </span>
-                Modification de la politique de confidentialité
-              </h2>
-              <div className="ml-11 text-gray-700 text-sm md:text-base leading-relaxed">
-                <p>
-                  MonHubimmo se réserve le droit de modifier la présente politique à tout moment. La date de mise à jour en haut de page sera actualisée en conséquence.
-                </p>
               </div>
             </section>
 

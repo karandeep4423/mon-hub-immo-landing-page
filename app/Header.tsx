@@ -29,7 +29,7 @@ export default function Header() {
             </Link>
           </div>
 
-          <nav className="hidden md:flex space-x-6">
+          {/* <nav className="hidden md:flex space-x-6">
             <Link
               href="/#"
               className="text-gray-700 hover:text-[#6AD1E3]"
@@ -42,7 +42,7 @@ export default function Header() {
             >
               Favoris
             </Link>
-          </nav>
+          </nav> */}
 
           <div className="flex items-center space-x-4">
             <button className="text-gray-500 hover:text-[#6AD1E3]">
