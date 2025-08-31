@@ -32,6 +32,7 @@ export default function LandingPage() {
     const data: ContactFormData = {
       name: formData.get("name") as string,
       email: formData.get("email") as string,
+      network: (formData.get("network") as string) || undefined,
       phone: (formData.get("phone") as string) || undefined,
     };
 
@@ -68,6 +69,7 @@ export default function LandingPage() {
   interface ContactFormData {
     name: string;
     email: string;
+    network?: string;
     phone?: string;
   }
 
@@ -85,7 +87,7 @@ export default function LandingPage() {
           </span>
         </p>
 
-        <h1 className="text-3xl md:text-5xl py-8 font-bold">
+        <h1 className="text-3xl md:text-5xl py-12 font-bold ">
           Découvrez
           <br />
           <span className="text-white">monhubimmo</span>
@@ -114,69 +116,18 @@ export default function LandingPage() {
 
         <button
           onClick={scrollToForm}
-          className="bg-white text-gray-900 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-200 shadow-lg"
+          className="bg-white text-gray-900 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-200 shadow-lg "
         >
-          Je veux être informé dès maintenant
+          Tester gratuitement pendant 3 mois
         </button>
       </section>
 
       {/* Notre histoire */}
-      <section className="bg-white py-16 px-6 text-[#034752]">
+      <section className="bg-white py-16 px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
-            L&apos;histoire de monhubimmo
-          </h2>
-
-          <h3 className="text-xl md:text-xl font-semibold text-center mb-8 text-[#00b4d8]">
-            Nous sommes deux frères, avec la même passion pour l&apos;immobilier
-            et la même frustration.
-          </h3>
-
-          <div className="space-y-6 leading-relaxed">
-            <p>
-              Dans mon activité, je rencontre chaque semaine de nombreuses
-              personnes avec un projet immobilier. Par habitude, je les oriente
-              vers des conseillers de confiance comme Emilie notre ambassadrice
-              de monhubimmo, ce qui leur permet de conclure des ventes. Mais je
-              n&apos;avais aucun outil concret pour fluidifier, sécuriser et
-              tracer ces échanges.
-            </p>
-
-            <p>
-              De mon côté, passionné d&apos;habitat et d&apos;architecture,
-              j&apos;ai travaillé plusieurs années dans l&apos;immobilier.
-              J&apos;ai pu constater, en tant qu&apos;agent, combien il était
-              chronophage de répéter sans cesse les critères des clients, de
-              voir des informations se perdre et de manquer des opportunités.
-              Plus tard, en tant que particulier lors de mes propres achats et
-              ventes, j&apos;ai retrouvé les mêmes difficultés. Cette double
-              expérience m&apos;a confirmé qu&apos;il fallait trouver une
-              meilleure solution.
-            </p>
-
-            <div className="bg-[#f8f9fa] p-6 rounded-lg border-l-4 border-[#00b4d8]">
-              <p className="font-medium">
-                En discutant ensemble, et avec d&apos;autres professionnels du
-                secteur, une évidence s&apos;est imposée :
-              </p>
-              <p className="mt-2">
-                Créer une solution simple, moderne et collaborative pour aider
-                les agents à mieux travailler ensemble, valoriser les apporteurs
-                d&apos;affaires et permettre aux particuliers d&apos;être mieux
-                accompagnés.
-              </p>
-            </div>
-
-            <p className="text-center font-semibold text-xl">
-              C&apos;est ainsi qu&apos;est né{" "}
-              <span className="text-[#00b4d8]">MonHubimmo</span>.
-            </p>
-
-            <p className="text-center text-lg font-medium bg-[#00b4d8] text-white p-4 rounded-lg">
-              Notre volonté : rendre l&apos;immobilier plus humain, plus
-              efficace et plus équitable, pour que chacun y gagne.
-            </p>
-          </div>
+          <p className="text-center text-lg font-medium bg-[#00b4d8] text-white p-4 rounded-lg">
+            La plateforme qui fait tomber les frontières entre agents
+          </p>
         </div>
       </section>
 
@@ -188,7 +139,30 @@ export default function LandingPage() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto text-[#034752]">
           <div className="border-2 border-[#00b4d8] p-6 rounded shadow">
-            <h3 className="font-bold text-lg mb-2">Partage de biens</h3>
+            <div className="flex items-center gap-4 mb-4">
+              <div className="w-12 h-12 bg-[#00b4d8] rounded-full flex items-center justify-center flex-shrink-0">
+                <svg
+                  className="w-6 h-6 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2 2z"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M8 5a2 2 0 012-2h4a2 2 0 012 2v2H8V5z"
+                  />
+                </svg>
+              </div>
+              <h3 className="font-bold text-lg">Partage de biens</h3>
+            </div>
             <p>
               Partagez votre stock (mandats simples, exclusifs ou off market)
               avec d&apos;autres mandataires.
@@ -196,7 +170,30 @@ export default function LandingPage() {
           </div>
 
           <div className="border-2 border-[#00b4d8] p-6 rounded shadow">
-            <h3 className="font-bold text-lg mb-2">Visibilité en temps réel</h3>
+            <div className="flex items-center gap-4 mb-4">
+              <div className="w-12 h-12 bg-[#00b4d8] rounded-full flex items-center justify-center flex-shrink-0">
+                <svg
+                  className="w-6 h-6 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                  />
+                </svg>
+              </div>
+              <h3 className="font-bold text-lg">Visibilité en temps réel</h3>
+            </div>
             <p>
               Visualisez les biens disponibles sur votre secteur et ceux de vos
               confrères en un coup d&apos;œil.
@@ -204,7 +201,24 @@ export default function LandingPage() {
           </div>
 
           <div className="border-2 border-[#00b4d8]  p-6 rounded shadow">
-            <h3 className="font-bold text-lg mb-2">Trouvez pour vos clients</h3>
+            <div className="flex items-center gap-4 mb-4">
+              <div className="w-12 h-12 bg-[#00b4d8] rounded-full flex items-center justify-center flex-shrink-0">
+                <svg
+                  className="w-6 h-6 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                  />
+                </svg>
+              </div>
+              <h3 className="font-bold text-lg">Trouvez pour vos clients</h3>
+            </div>
             <p>
               Accédez aux biens des autres agents immobiliers pour satisfaire
               les besoins de vos clients.
@@ -212,9 +226,21 @@ export default function LandingPage() {
           </div>
 
           <div className="border-2 border-[#00b4d8] p-6 rounded shadow">
-            <h3 className="font-bold text-lg mb-2">
-              Recherches clients ciblées
-            </h3>
+            <div className="flex items-center gap-4 mb-4">
+              <div className="w-12 h-12 bg-[#00b4d8] rounded-full flex items-center justify-center flex-shrink-0">
+                <svg
+                  className="w-6 h-6 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <circle cx="12" cy="12" r="6" />
+                  <circle cx="12" cy="12" r="2" />
+                </svg>
+              </div>
+              <h3 className="font-bold text-lg">Recherches clients ciblées</h3>
+            </div>
             <p>
               Déposez des recherches et recevez des propositions adaptées
               automatiquement.
@@ -222,18 +248,50 @@ export default function LandingPage() {
           </div>
 
           <div className="border-2 border-[#00b4d8] p-6 rounded shadow">
-            <h3 className="font-bold text-lg mb-2">
-              Collaboration multi-réseaux
-            </h3>
+            <div className="flex items-center gap-4 mb-4">
+              <div className="w-12 h-12 bg-[#00b4d8] rounded-full flex items-center justify-center flex-shrink-0">
+                <svg
+                  className="w-6 h-6 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                  />
+                </svg>
+              </div>
+              <h3 className="font-bold text-lg">Collaboration multi-réseaux</h3>
+            </div>
             <p>
               Collaborez facilement avec tous les professionnels de
-              l’immobilier, indépendamment de leur réseau qu’ils soient
-              indépendants, en réseau, mandataires, VRP ou en agence.
+              l&apos;immobilier, indépendamment de leur réseau qu&apos;ils
+              soient indépendants, en réseau, mandataires, VRP ou en agence.
             </p>
           </div>
 
           <div className="border-2 border-[#00b4d8] p-6 rounded shadow">
-            <h3 className="font-bold text-lg mb-2">Messagerie privée</h3>
+            <div className="flex items-center gap-4 mb-4">
+              <div className="w-12 h-12 bg-[#00b4d8] rounded-full flex items-center justify-center flex-shrink-0">
+                <svg
+                  className="w-6 h-6 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                  />
+                </svg>
+              </div>
+              <h3 className="font-bold text-lg">Messagerie privée</h3>
+            </div>
             <p>
               Consultez l&apos;historique de vos échanges et discutez en toute
               confidentialité.
@@ -241,7 +299,24 @@ export default function LandingPage() {
           </div>
 
           <div className="border-2  border-[#00b4d8] p-6 rounded shadow md:col-span-2 lg:col-span-3">
-            <h3 className="font-bold text-lg mb-2">Tableau de bord intuitif</h3>
+            <div className="flex items-center gap-4 mb-4">
+              <div className="w-12 h-12 bg-[#00b4d8] rounded-full flex items-center justify-center flex-shrink-0">
+                <svg
+                  className="w-6 h-6 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                  />
+                </svg>
+              </div>
+              <h3 className="font-bold text-lg">Tableau de bord intuitif</h3>
+            </div>
             <p>
               Gérez vos fiches clients, mandats et recherches simplement depuis
               un espace unique.
@@ -250,7 +325,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="bg-white py-16 px-6 text-[#034752]">
+      <section className="bg-white pb-16 px-6 text-[#034752]">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-xl md:text-2xl font-bold mb-6">
             <span className="inline-flex items-center gap-2">
@@ -314,6 +389,13 @@ export default function LandingPage() {
                 placeholder="Adresse e-mail"
                 className="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-[#0077b6] focus:border-transparent"
                 required
+                disabled={loading}
+              />
+              <input
+                type="text"
+                name="network"
+                placeholder="Votre réseau ou agence (iad, Safti, Orpi, Century 21, agence indépendante...) - facultatif"
+                className="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-[#0077b6] focus:border-transparent"
                 disabled={loading}
               />
               <input

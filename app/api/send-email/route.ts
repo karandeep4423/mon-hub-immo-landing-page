@@ -4,13 +4,14 @@ import nodemailer from 'nodemailer';
 interface ContactFormData {
   name: string;
   email: string;
+  network?: string;
   phone?: string;
 }
 
 export async function POST(request: NextRequest) {
   try {
     const body: ContactFormData = await request.json();
-    const { name, email, phone } = body;
+    const { name, email, network, phone } = body;
 
     // Validate required fields
     if (!name || !email) {
@@ -156,6 +157,7 @@ export async function POST(request: NextRequest) {
         <div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px;">
           <p><strong>Nom:</strong> ${name}</p>
           <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Réseau/Agence:</strong> ${network || 'Non fourni'}</p>
           <p><strong>Téléphone:</strong> ${phone || 'Non fourni'}</p>
         </div>
         <p style="margin-top: 20px; color: #666;">
@@ -203,6 +205,7 @@ www.monhubimmo.com`,
       text: `Nouvelle inscription:
       Nom: ${name}
       Email: ${email}
+      Réseau/Agence: ${network || 'Non fourni'}
       Téléphone: ${phone || 'Non fourni'}`,
     };
 
