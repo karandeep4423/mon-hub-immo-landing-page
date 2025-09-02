@@ -133,26 +133,34 @@ export async function POST(request: NextRequest) {
         <!-- Banner -->
         <div class="banner">
             <img src="https://www.monhubimmo.com/logo.png" alt="MonHubimmo Logo">
-            <h1>Bienvenue sur MonHubimmo</h1>
-            <p>Votre accès prioritaire est confirmé</p>
+            <h1>Bienvenue chez MonHubimmo</h1>
+            <p>Votre inscription est confirmée</p>
         </div>
         <!-- Content -->
         <div class="content">
             <p>Bonjour <strong>${name}</strong>,</p>
-            <p>Merci de vous être inscrit sur <strong>MonHubimmo</strong>, la 1ère plateforme collaborative dédiée aux mandataires immobiliers.</p>
-            <p><strong>Le développement est en cours</strong> et la sortie officielle est prévue très bientôt.<br>
-            En tant qu'inscrit <strong>parmi les premiers</strong>, vous profitez automatiquement de <strong>3 mois offerts</strong> dès l'ouverture de la plateforme.</p>
-            <p><strong>Vos coordonnées sont enregistrées</strong> – vous recevrez un e-mail dès le lancement officiel pour activer votre compte et découvrir toutes les fonctionnalités :</p>
+            <p>Merci pour votre inscription à <strong>MonHubimmo</strong>, la première plateforme collaborative dédiée aux professionnels de l'immobilier.</p>
+            
+            <p><strong>Le développement est en cours et la sortie officielle arrive très bientôt.</strong> 🎉</p>
+            
+            <p>👉 <strong>En tant qu'inscrit parmi les premiers, vous bénéficierez automatiquement de 3 mois offerts dès l'ouverture.</strong></p>
+            
+            <p><strong>Dès le lancement, vous pourrez profiter de toutes les fonctionnalités :</strong></p>
             <ul>
-                <li>Partage de biens et de recherches</li>
-                <li>Mise en relation entre agents, tous réseaux confondus</li>
-                <li>Alertes et mises à jour en temps réel</li>
+                <li>✔️ Partage simple de biens et de recherches</li>
+                <li>✔️ Mise en relation entre agents, tous réseaux confondus</li>
+                <li>✔️ Alertes et mises à jour en temps réel</li>
             </ul>
-            <blockquote><em>Dans l'immobilier, chaque contact compte… et chaque opportunité se saisit ensemble.</em></blockquote>
+            
+            <p><strong>Vos coordonnées sont bien enregistrées</strong> : vous recevrez un e-mail dès l'ouverture officielle pour activer votre compte.</p>
+            
+            <blockquote><em>Dans l'immobilier, chaque contact compte… et chaque opportunité se construit ensemble.</em></blockquote>
+            
             <!-- Social + Partage -->
-            <p><strong>Suivez-nous sur Instagram</strong> → <a href="https://instagram.com/monhubimmo" target="_blank">@monhubimmo</a><br>
-            <strong>Partagez cette page</strong> : plus on est connectés, plus on vend ensemble.</p>
-            <!-- CTA -->
+            <p>En attendant, retrouvez-nous sur Instagram → <a href="https://instagram.com/monhubimmo" target="_blank">@monhubimmo</a></p>
+            <p>📢 <strong>Partagez cette page</strong> : plus on est connectés, plus on vend ensemble.</p>
+            
+            <!-- CTA Button -->
             <a href="https://monhubimmo.com/" class="cta-button">Visiter MonHubimmo</a>
         </div>
         <!-- Footer -->
@@ -185,30 +193,32 @@ export async function POST(request: NextRequest) {
     const welcomeMailOptions = {
       from: process.env.SMTP_USER,
       to: email,
-      subject: 'Bienvenue sur MonHubimmo - Votre accès prioritaire est confirmé',
+      subject: 'Bienvenue chez MonHubimmo 🚀',
       html: welcomeEmailHTML,
       text: `Bonjour ${name},
 
-Merci de vous être inscrit sur MonHubimmo, la 1ère plateforme collaborative dédiée aux mandataires immobiliers.
+Merci pour votre inscription à MonHubimmo, la première plateforme collaborative dédiée aux professionnels de l'immobilier.
 
-Le développement est en cours et la sortie officielle est prévue très bientôt.
-En tant qu'inscrit parmi les premiers, vous profitez automatiquement de 3 mois offerts dès l'ouverture de la plateforme.
+Le développement est en cours et la sortie officielle arrive très bientôt. 🎉
 
-Vos coordonnées sont enregistrées – vous recevrez un e-mail dès le lancement officiel pour activer votre compte et découvrir toutes les fonctionnalités :
+👉 En tant qu'inscrit parmi les premiers, vous bénéficierez automatiquement de 3 mois offerts dès l'ouverture.
 
-- Partage de biens et de recherches
-- Mise en relation entre agents, tous réseaux confondus
-- Alertes et mises à jour en temps réel
+Dès le lancement, vous pourrez profiter de toutes les fonctionnalités :
 
-Dans l'immobilier, chaque contact compte… et chaque opportunité se saisit ensemble.
+✔️ Partage simple de biens et de recherches
+✔️ Mise en relation entre agents, tous réseaux confondus
+✔️ Alertes et mises à jour en temps réel
 
-Suivez-nous sur Instagram → @monhubimmo
-Partagez cette page : plus on est connectés, plus on vend ensemble.
+Vos coordonnées sont bien enregistrées : vous recevrez un e-mail dès l'ouverture officielle pour activer votre compte.
 
-Visitez MonHubimmo : https://monhubimmo.com/
+Dans l'immobilier, chaque contact compte… et chaque opportunité se construit ensemble.
 
-L'équipe MonHubimmo
-www.monhubimmo.com`,
+En attendant, retrouvez-nous sur Instagram → @monhubimmo
+
+📢 Partagez cette page : plus on est connectés, plus on vend ensemble.
+
+À très bientôt,
+L'équipe MonHubimmo`,
     };
 
     // Admin notification email options
