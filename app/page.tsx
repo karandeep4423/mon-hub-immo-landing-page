@@ -37,7 +37,7 @@ export default function LandingPage() {
     };
 
     try {
-      const res = await fetch("https://www.monhubimmo.com/api/send-email", {
+      const res = await fetch("/api/send-email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

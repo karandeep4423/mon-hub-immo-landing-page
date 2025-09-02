@@ -1,6 +1,21 @@
 import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
+// CORS headers for cross-domain requests
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'POST, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type',
+};
+
+// Handle OPTIONS request for CORS preflight
+export async function OPTIONS() {
+  return new NextResponse(null, {
+    status: 200,
+    headers: corsHeaders,
+  });
+}
+
 interface ContactFormData {
   name: string;
   email: string;
@@ -17,7 +32,7 @@ export async function POST(request: NextRequest) {
     if (!name || !email) {
       return NextResponse.json(
         { error: 'Le nom et l\'email sont requis' },
-        { status: 400 }
+        { status: 400, headers: corsHeaders }
       );
     }
 
@@ -26,7 +41,7 @@ export async function POST(request: NextRequest) {
     if (!emailRegex.test(email)) {
       return NextResponse.json(
         { error: 'Format d\'email invalide' },
-        { status: 400 }
+        { status: 400, headers: corsHeaders }
       );
     }
 
@@ -217,12 +232,14 @@ www.monhubimmo.com`,
 
     return NextResponse.json({ 
       message: 'Inscription réussie et email de bienvenue envoyé' 
+    }, {
+      headers: corsHeaders,
     });
   } catch (error) {
     console.error('Error sending email:', error);
     return NextResponse.json(
       { error: 'Erreur lors de l\'inscription' },
-      { status: 500 }
+      { status: 500, headers: corsHeaders }
     );
   }
 }
