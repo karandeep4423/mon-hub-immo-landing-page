@@ -378,7 +378,7 @@ export default function LandingPage() {
               <input
                 type="text"
                 name="name"
-                placeholder="Nom"
+                placeholder="Nom et prénom"
                 className="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-[#0077b6] focus:border-transparent"
                 required
                 disabled={loading}
@@ -394,6 +394,7 @@ export default function LandingPage() {
               <input
                 type="text"
                 name="network"
+                required
                 placeholder="Votre réseau ou agence (iad, Safti, Orpi, Century 21, agence indépendante...) - facultatif"
                 className="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-[#0077b6] focus:border-transparent"
                 disabled={loading}
@@ -404,6 +405,7 @@ export default function LandingPage() {
                 placeholder="Numéro de téléphone"
                 className="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-[#0077b6] focus:border-transparent"
                 disabled={loading}
+                required
               />
               <button
                 type="submit"

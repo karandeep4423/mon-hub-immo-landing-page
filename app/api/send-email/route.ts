@@ -85,7 +85,7 @@ export async function POST(request: NextRequest) {
             box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
         .banner {
-            background: linear-gradient(135deg, #007BFF, #0056b3);
+            background: #00b4d8;
             text-align: center;
             padding: 30px 20px;
             color: white;
@@ -112,7 +112,7 @@ export async function POST(request: NextRequest) {
         .cta-button {
             display: inline-block;
             padding: 12px 20px;
-            background-color: #007BFF;
+            background-color: #00b4d8;
             color: white !important;
             text-decoration: none;
             border-radius: 6px;
@@ -191,7 +191,7 @@ export async function POST(request: NextRequest) {
 
     // Welcome email options for the user
     const welcomeMailOptions = {
-      from: process.env.SMTP_USER,
+      from:`"monhubimmo" <${process.env.SMTP_USER}>`,
       to: email,
       subject: 'Bienvenue chez MonHubimmo 🚀',
       html: welcomeEmailHTML,
@@ -223,7 +223,7 @@ L'équipe MonHubimmo`,
 
     // Admin notification email options
     const adminMailOptions = {
-      from: process.env.SMTP_USER,
+      from:`"monhubimmo" <${process.env.SMTP_USER}>`,
       to: process.env.RECIPIENT_EMAIL,
       subject: `Nouvelle inscription de ${name}`,
       html: adminEmailContent,
