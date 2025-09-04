@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
+import connectToDatabase from '../../../lib/mongodb';
+import FormSubmission from '../../../lib/models/FormSubmission';
 
 // CORS headers for cross-domain requests
 const corsHeaders = {
@@ -44,6 +46,27 @@ export async function POST(request: NextRequest) {
         { status: 400, headers: corsHeaders }
       );
     }
+
+    // Connect to MongoDB
+    await connectToDatabase();
+
+    // Get client IP and user agent
+    const forwarded = request.headers.get('x-forwarded-for');
+    const ipAddress = forwarded ? forwarded.split(',')[0] : request.headers.get('x-real-ip') || 'unknown';
+    const userAgent = request.headers.get('user-agent') || 'unknown';
+
+    // Save form submission to MongoDB
+    const formSubmission = new FormSubmission({
+      name,
+      email,
+      network,
+      phone,
+      ipAddress,
+      userAgent,
+      submittedAt: new Date()
+    });
+
+    await formSubmission.save();
 
     // Create transporter
     const transporter = nodemailer.createTransport({
@@ -241,7 +264,8 @@ L'équipe MonHubimmo`,
     await transporter.sendMail(adminMailOptions);
 
     return NextResponse.json({ 
-      message: 'Inscription réussie et email de bienvenue envoyé' 
+      message: 'Inscription réussie et email de bienvenue envoyé',
+      submissionId: formSubmission._id
     }, {
       headers: corsHeaders,
     });

@@ -1475,6 +1475,15 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* Admin Link - Development Only */}
+      {process.env.NODE_ENV === 'development' && (
+        <div className="bg-gray-800 text-white py-2 text-center">
+          <a href="/admin/submissions" className="text-blue-300 hover:text-blue-100 underline">
+            🔧 Admin: Voir les soumissions de formulaire
+          </a>
+        </div>
+      )}
+
       {/* Footer */}
       <footer className="bg-[#f9f9f9] text-[#333] py-10 px-6 sm:px-16">
         <div className=" max-w-7xl mx-auto  justify-center grid md:grid-cols-3 gap-4 md:gap-16">
