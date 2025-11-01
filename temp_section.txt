@@ -1,0 +1,19 @@
+﻿</div>
+        </div>
+      </section>
+
+      {/* rendez vous page section  */}
+      <section className="pb-16 px-6">
+        <h2 className="text-2xl font-bold text-center text-white my-5 bg-cyan-500 px-10 ">
+          MonHubimmo, la passerelle digitale entre les besoins des particuliers
+          et les solutions des pros.
+        </h2>
+        <div>
+          <div>
+            <h3>
+              La prise de rendez-vous immobilière, aussi simple que sur Doctolib
+            </h3>
+            <p>
+              {" "}
+              En plus du partage de mandats et des affaires apportées,
+      
