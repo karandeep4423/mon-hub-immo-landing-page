@@ -329,50 +329,57 @@ export default function LandingPage() {
       <section className="bg-white pb-16 px-6">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-xl md:text-xl font-bold text-center text-white mb-8 bg-[#00b4d8] p-6 rounded-lg">
-            MonHubimmo, la passerelle digitale entre les besoins des particuliers
-            et les solutions des pros.
+            MonHubimmo, la passerelle digitale entre les besoins des
+            particuliers et les solutions des pros.
           </h2>
-          
+
           <div className="grid md:grid-cols-2 gap-8 items-start">
             {/* Left column - Text content */}
             <div className=" rounded-lg  p-8 text-[#034752]">
               <h3 className="text-xl md:text-2xl font-bold mb-4">
-                La prise de rendez-vous immobilière, aussi simple que sur Doctolib.
+                La prise de rendez-vous immobilière, aussi simple que sur
+                Doctolib.
               </h3>
-              
+
               <p className="text-lg mb-4 text-[#5b7c8d]">
                 En plus du partage de mandats et des affaires apportées,
                 MonHubimmo va plus loin.
               </p>
-              
+
               <p className="text-lg mb-6 text-[#5b7c8d]">
-                Chaque agent inscrit bénéficie automatiquement d&apos;une fiche visible dans
-                l&apos;annuaire des professionnels.
+                Chaque agent inscrit bénéficie automatiquement d&apos;une fiche
+                visible dans l&apos;annuaire des professionnels.
               </p>
 
               <div className="bg-gray-50 p-6 rounded-lg">
                 <p className="text-md mb-4 text-[#5b7c8d]">
                   Un peu comme Doctolib, cette option vous permet de :
                 </p>
-                
+
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
                     <span className="text-[#00b4d8] font-bold text-xl">-</span>
-                    <span className="text-[#5b7c8d]">Être visible dans votre secteur,</span>
+                    <span className="text-[#5b7c8d]">
+                      Être visible dans votre secteur,
+                    </span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-[#00b4d8] font-bold text-xl">-</span>
-                    <span className="text-[#5b7c8d]">Recevoir directement des demandes de rendez-vous,</span>
+                    <span className="text-[#5b7c8d]">
+                      Recevoir directement des demandes de rendez-vous,
+                    </span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-[#00b4d8] font-bold text-xl">-</span>
-                    <span className="text-[#5b7c8d]">Attirer de nouveaux leads et opportunités locales.</span>
+                    <span className="text-[#5b7c8d]">
+                      Attirer de nouveaux leads et opportunités locales.
+                    </span>
                   </li>
                 </ul>
-                
+
                 <p className="text-md mt-6 text-[#5b7c8d]">
-                  Une fonctionnalité en plus, gratuite, pour renforcer votre visibilité et
-                  générer encore plus de collaborations.
+                  Une fonctionnalité en plus, gratuite, pour renforcer votre
+                  visibilité et générer encore plus de collaborations.
                 </p>
               </div>
             </div>
@@ -421,18 +428,10 @@ export default function LandingPage() {
 
       {/* PAGE 2 - FORMULAIRE */}
       <section className="bg-[#00b4d8] py-16 px-6 flex flex-col items-center text-center">
-        <h2 className="text-xl font-semibold mb-2 text-white">
-          Offre de lancement : 3 mois offerts pour les 100 premiers inscrits!
-          <br />
-          Ensuite, 19,99€/mois, sans engagement.
-          <br />
-          Et si votre réseau est partenaire, profitez d’un{" "}
-          <strong>tarif préférentiel exclusif.</strong>
-        </h2>
-        <p className="mb-6 text-white max-w-xl">
+        <h2 className="text-xl font-semibold mb-6 text-white">
           Rejoignez la <strong>1ere plateforme collaborative</strong> de
           l&apos;immobilier
-        </p>
+        </h2>
         <div className="flex  flex-col-reverse sm:flex-row items-center justify-center gap-14">
           <div className="bg-white text-gray-900 w-full max-w-md p-6 rounded-lg shadow">
             <h3 className="text-lg font-semibold mb-4">
